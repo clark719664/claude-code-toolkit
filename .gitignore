@@ -1,0 +1,10 @@
+# per-machine ledgers and widget state
+llm-ledger.csv
+*.csv
+*.pos
+pet-mode.txt
+*-state.json
+__pycache__/
+*.pyc
+# shrink.py output
+*_small.png

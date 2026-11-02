@@ -1,0 +1,3 @@
+#!/bin/sh
+# Bash wrapper: llm "prompt" [-Stdin] [-File path] [-System "..."] [-Model name] [-Reason] [-Think] [-Image path] [-Out path] [-Stats]
+exec powershell.exe -NoProfile -ExecutionPolicy Bypass -File "$(cygpath -w "$HOME/.claude/tools/llm.ps1")" "$@"

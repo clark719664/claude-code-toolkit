@@ -1,0 +1,25 @@
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Read",
+        "hooks": [
+          { "type": "command", "command": "python \"C:/Users/<you>/.claude/tools/read-guard.py\"", "timeout": 10 }
+        ]
+      },
+      {
+        "hooks": [
+          { "type": "command", "command": "python \"C:/Users/<you>/.claude/tools/turn-guard.py\"", "timeout": 10 }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write|NotebookEdit",
+        "hooks": [
+          { "type": "command", "command": "python \"C:/Users/<you>/.claude/tools/read-guard.py\"", "timeout": 10 }
+        ]
+      }
+    ]
+  }
+}
